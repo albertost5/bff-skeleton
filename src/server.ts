@@ -25,7 +25,6 @@ class Server {
 
         return this.app.listen(port, () => {
             console.log('BFF Layer started in host: ' + os.hostname + ' port: ' + port);
-            console.log('The application is listening on port: ' + port);
         });
     }
 

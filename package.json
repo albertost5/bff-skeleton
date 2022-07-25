@@ -8,7 +8,7 @@
   },
   "scripts": {
     "build": "rimraf ./dist && tsc --build tsconfig.json && npm run copy:all",
-    "start": "cross-env NODE_ENV=dev NODE_CONFIG_DIR='./config' node dist/server.js",
+    "start": "cross-env NODE_ENV=dev NODE_CONFIG_DIR='./config' node dist/server.js --experimental-fetch",
     "copy:all": "npm run copy:config",
     "copy:config": "cpx \"config/**/*.*\" dist/config",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/albertost5/bff-skeleton#readme",
   "dependencies": {
+    "axios": "^0.27.2",
     "body-parser": "^1.20.0",
     "config": "^3.3.7",
     "cors": "^2.8.5",
