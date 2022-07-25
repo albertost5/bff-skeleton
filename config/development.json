@@ -1,0 +1,10 @@
+{
+    "name": "development",
+    "logs_folder": "./logs/",
+    "logs_level": "debug",
+    "disabled_logs": false,
+    "logsOnlyConsole": true,
+    "backend1_base_url": "",
+    "backend2_base_url": "",
+    "backend3_base_url": ""
+  }	
