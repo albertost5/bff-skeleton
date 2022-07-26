@@ -26,15 +26,17 @@ class BackendControllerExample extends AbstractController {
         const backendProvider = new BackendProvider();
 
         try {
+
             const backendResponse = await backendProvider.backendUsingGET();
             console.log('controllerResponse => ', backendResponse.data);
-
             return this.sendResponse(req, res, backendService.backendResponse(backendResponse.data), startDate);
+
         } catch (error) {
+
             bffResponse.status = 500;
             bffResponse.data = ErrorUtil.errorResponse('50000', 'INTERNAL_SERVER_ERROR', 'Error occurred while processing the endpoint /backendControllerExample');
-
             return this.sendResponse(req, res, bffResponse, startDate);
+            
         }
     }
 }

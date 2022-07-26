@@ -1,6 +1,6 @@
 import { getBaseResponse } from '../../../utils/response.util';
 
-function backendResponse(backendRes: any) {
+function backendResponse( backendRes: any ) {
     const baseResponse = getBaseResponse();
     baseResponse.contentType = 'application/json';
     baseResponse.data = {}
